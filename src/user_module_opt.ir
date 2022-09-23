@@ -1,0 +1,7 @@
+package user_module
+
+file_number 0 "fake_file.x"
+
+top fn __user_module__user_module(io_in: bits[8]) -> bits[8] {
+  ret not.5: bits[8] = not(io_in, id=5, pos=[(0,4,2)])
+}

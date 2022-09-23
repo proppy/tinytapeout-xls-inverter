@@ -1,0 +1,11 @@
+package user_module
+
+file_number 0 "fake_file.x"
+
+fn __user_module__inverter(n: bits[8]) -> bits[8] {
+  ret not.2: bits[8] = not(n, id=2, pos=[(0,4,2)])
+}
+
+top fn __user_module__user_module(io_in: bits[8]) -> bits[8] {
+  ret invoke.4: bits[8] = invoke(io_in, to_apply=__user_module__inverter, id=4, pos=[(0,18,10)])
+}
